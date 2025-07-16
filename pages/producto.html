@@ -79,11 +79,10 @@
     </nav>
     <!--TITULO-->
     <h2 class="titulo-productos"><em><strong>¡COMPRA NUESTROS PRODUCTOS 🛒🛒🛒!</strong></em></h2>
-    
-    
+
+
     <!--FILA DE TARJETAS-->
     <div class="flex flex-wrap justify-center gap-6 px-4 py-8">
-        <!-- Tarjeta 1 -->
         <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <img class="p-4 w-full rounded-t-lg"
                 src="https://www.supermaxi.com/wp-content/uploads/2024/12/7868000587920-1.jpg" alt="product image" />
@@ -103,10 +102,17 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">$14.90</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center border border-gray-300 rounded-md">
+                            <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">-</button>
+                            <span class="px-2 py-1">0</span>
+                            <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">+</button>
+                        </div>
+                        <button
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Añadir
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,14 +335,13 @@
     <!--FOOTER-->
     <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800 pie-de-pagina">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a
-                    href="/index.html" class="hover:underline">"La Douceur Cacao"</a>. Todos los
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="/index.html"
+                    class="hover:underline">"La Douceur Cacao"</a>. Todos los
                 derechos reservados.
             </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                 <li>
-                    <a href="/pages/producto.html"
-                        class="hover:underline me-4 md:me-6">Productos</a>
+                    <a href="/pages/producto.html" class="hover:underline me-4 md:me-6">Productos</a>
                 </li>
                 <li>
                     <a href="/pages/contacto.html" class="hover:underline">Contacto</a>
