@@ -1,0 +1,27 @@
+.error {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.border-red-500 {
+    border-color: #ef4444;
+}
+
+.border-green-500 {
+    border-color: #10b981;
+}
+
+.text-red-600 {
+    color: #dc2626;
+}
+#registroExitoso{
+    text-align: center;
+    font-size: 30px;
+    padding: 12px;
+    color: greenyellow;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}

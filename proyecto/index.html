@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IMPORTAR FLOWBITE-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--FAVICON-->
+    <link rel="icon" href="img/cocoa_icon.png">
+    <!--ENLACE MIS ESTILOS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!--NAV-->
+    <nav class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600 mi-nav">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mi-nav">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="img/cocoa_icon.png" class="h-20 logo" alt="Logo">
+                <h3 class="flex flex-wrap font-semibold dark:text-white">La Douceur Cacao</h3>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mi-nav">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/producto.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shop icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                            </svg>
+                            Productos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/contacto.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-plus icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                <path fill-rule="evenodd"
+                                    d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--CARRUSEL-->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 mi-carrusel">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/img1.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 foto"
+                    alt="cacao_foto1">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/cacao-patio-1.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 foto"
+                    alt="cacao_foto2">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/moliendo-cacao.png"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 foto"
+                    alt="cacao_foto3">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/cacao-chocolate.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 foto"
+                    alt="cacao_foto4">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="img/img5.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 foto"
+                    alt="cacao_foto5">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <!--TITULO-->
+    <div class="contenedor-titulo flex items-center justify-center my-8">
+        <hr class="border-t border-black w-32 md:w-48 mx-4">
+        <h2 class="titulo text-center px-4">
+            <em><strong>ACERCA DE NOSOTROS</strong></em>
+        </h2>
+        <hr class="border-t border-black w-32 md:w-48 mx-4">
+    </div>
+    <!--CARD-->
+    <div class="contenedorTarjeta grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <!-- Tarjeta 1 -->
+        <div class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full tarjeta">
+            <img class="rounded-t-lg w-full h-48 object-cover" 
+            src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt="empresa_ficticia" />
+            <div class="p-5 flex flex-col flex-grow">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black text-center">NUESTRA HISTORIA</h5>
+                <p class="mb-3 font-normal text-black flex-grow">
+                    Empresa ecuatoriana apasionada por el cacao, produciendo y distribuyendo granos y derivados con
+                    altos estándares de calidad. Combinamos sostenibilidad, ética e innovación para crear chocolates
+                    excepcionales. Buscamos destacar globalmente, llevando la excelencia del cacao ecuatoriano al mundo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full tarjeta">
+            <img class="rounded-t-lg w-full h-48 object-cover"
+                src="https://cofinacocoa.com/wp-content/uploads/2018/09/mision2.jpg" alt="finca_cacao" />
+            <div class="p-5 flex flex-col flex-grow">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black text-center">MISIÓN</h5>
+                <p class="mb-3 font-normal text-black flex-grow">
+                    Somos una empresa ecuatoriana dedicada a la producción y comercialización de cacao y sus derivados,
+                    cumpliendo altos estándares de calidad e inocuidad. Trabajamos con sostenibilidad, responsabilidad
+                    social y cuidado ambiental para garantizar la satisfacción.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full tarjeta">
+            <img class="rounded-t-lg w-full h-48 object-cover"
+                src="https://cofinacocoa.com/wp-content/uploads/2018/06/vision.jpg" alt="personas_reunidas" />
+            <div class="p-5 flex flex-col flex-grow">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black text-center">VISIÓN</h5>
+                <p class="mb-3 font-normal text-black flex-grow">
+                    Queremos ser reconocidos internacionalmente como productores de chocolate de excelencia, superando
+                    expectativas en sabor y calidad. Promovemos negocios inclusivos con proveedores e innovación en
+                    procesos, consolidando el cacao ecuatoriano en el mundo expandiendonos.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800 pie-de-pagina">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a
+                    href="/index.html" class="hover:underline">"La Douceur Cacao"</a>. Todos los
+                derechos reservados.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="/producto.html"
+                        class="hover:underline me-4 md:me-6">Productos</a>
+                </li>
+                <li>
+                    <a href="/contacto.html" class="hover:underline">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

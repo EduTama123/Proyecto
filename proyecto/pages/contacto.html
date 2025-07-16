@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IMPORTAR FLOWBITE-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!--FAVICON-->
+    <link rel="icon" href="/img/cocoa_icon.png">
+    <!--ENLACE MIS ESTILOS-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/contacto.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <!--NAV-->
+    <nav class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600 mi-nav">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mi-nav">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/img/cocoa_icon.png" class="h-20 logo" alt="Logo">
+                <h3 class="flex flex-wrap font-semibold dark:text-white">La Douceur Cacao</h3>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mi-nav">
+                    <li>
+                        <a href="/index.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/producto.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-shop icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                            </svg>
+                            Productos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/contacto.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-plus icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                <path fill-rule="evenodd"
+                                    d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--SECCION-->
+    <section class="form-section bg-[#f9dbbd] p-6 md:p-8 lg:p-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex-shrink-0">
+                    <img src="/img/contacto.svg" alt="Icono de contacto"
+                        class="w-16 h-16 md:w-20 md:h-20 object-contain">
+                </div>
+                <div class="text-center-container">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Contáctanos</h2>
+                    <p class="text-gray-600 mt-2">Puedes decirnos tus inquietudes mediante este formulario<br>Por favor
+                        ingrese los siguientes datos.</p>
+                </div>
+            </div>
+
+            <!-- FORMULARIO ACTUALIZADO -->
+            <form class="space-y-4" id="formContacto">
+                <!--Campo 1: nombre y apellido-->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="nombres" class="block mb-2 text-sm font-medium text-gray-900">Nombres</label>
+                        <input type="text" id="nombres"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                            placeholder="Juan Carlos" required>
+                            <p id="errorNombre" class="error"></p>
+                    </div>
+                    <div>
+                        <label for="apellidos" class="block mb-2 text-sm font-medium text-gray-900">Apellidos</label>
+                        <input type="text" id="apellidos"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                            placeholder="Pérez González" required>
+                            <p id="errorApellido" class="error"></p>
+                    </div>
+                </div>
+
+                <!--Campo 2: Correo-->
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Correo electrónico</label>
+                    <input type="email" id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                        placeholder="nombre@email.com" required>
+                        <p id="errorEmail" class="error"></p>
+                </div>
+
+                <!--Campo 3: Teléfono-->
+                <div>
+                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Teléfono/Celular</label>
+                    <input type="tel" id="phone"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                        placeholder="0999999999" required>
+                        <p id="errorTelefono" class="error"></p>
+                </div>
+
+                <!--Campo 4: Codigo postal-->
+                <div>
+                    <label for="codigo-postal" class="block mb-2 text-sm font-medium text-gray-900">Código Postal</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                        placeholder="123456" required>
+                    <p id="errorCodigoPostal" class="error"></p>
+                </div>
+
+                <!--Campo 5: Pais -->
+                <div class="mb-4">
+                    <label for="pais" class="block mb-2 text-sm font-medium text-gray-900">País</label>
+                    <input type="text" id="pais" name="pais"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                        placeholder="Ecuador" required>
+                    <span id="errorPais" class="error"></span>
+                </div>
+
+                <!--Campo 6: Fecha de nacimiento-->
+                <div class="mb-4">
+                    <label for="fecha-nacimiento" class="block mb-2 text-sm font-medium text-gray-900">Fecha de
+                        Nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                        required>
+                    <p id="errorFechaNacimiento" class="error"></p>
+                </div>
+
+                <!--Campo 7: Mensaje-->
+                <div>
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Mensaje</label>
+                    <textarea id="message" rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                        placeholder="Describe tu consulta en detalle..." required></textarea>
+                        <p id="errorMensaje" class="error"></p>
+                </div>
+
+                <!--Boton de enviar-->
+                <button type="submit"
+                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4" id="botonEnviar" disabled>Enviar
+                    mensaje</button>
+            </form>
+        </div>
+        <p id="registroExitoso"></p>
+    </section>
+
+    <!--IMPRIMIR TABLA-->
+    <div id="resultTable" class="hidden mt-8 bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-4">Resumen de tu mensaje</h3>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="p-3 text-left text-sm font-semibold text-gray-700 whitespace-nowrap">Campo</th>
+                        <th class="p-3 text-left text-sm font-semibold text-gray-700">Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="divide-y divide-gray-200">
+                    <!--Los datos se mostraran aqui-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!--TITULO CONTACTO-->
+    <h2 class="titulo-contacto"><strong><em>¿Tienes preguntas?</em></strong></h2>
+
+    <!-- ACORDEON -->
+    <div class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 py-8">
+        <div id="accordion-collapse" data-accordion="collapse">
+            <div class="mb-1">
+                <h2 id="accordion-collapse-heading-1">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-6 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all texto"
+                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
+                        aria-controls="accordion-collapse-body-1">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿Qué es nuestro proceso de cultivo?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                    <div class="p-6 border border-t-0 border-gray-200 bg-white">
+                        <p class="mb-3 text-gray-800 font-medium">Nuestro cacao se cultiva bajo sombra natural con
+                            técnicas ancestrales:</p>
+                        <ul class="ps-5 text-gray-700 list-disc space-y-2">
+                            <li>Fermentación controlada de 5-7 días</li>
+                            <li>Secado solar en camas elevadas</li>
+                            <li>Selección manual de granos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-1">
+                <h2 id="accordion-collapse-heading-2">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-6 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all texto"
+                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-2">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿Tienen certificaciones orgánicas?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                    <div class="p-6 border border-t-0 border-gray-200 bg-white">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-3">Certificaciones actuales</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 mr-2 text-amber-500 mt-0.5" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        USDA Organic
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 mr-2 text-amber-500 mt-0.5" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        Fair Trade Certified
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-3">En proceso</h3>
+                                <p class="text-gray-700">Actualmente en evaluación para Rainforest Alliance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 id="accordion-collapse-heading-3">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-6 text-lg font-semibold text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 focus:ring-2 focus:ring-amber-300 transition-all rounded-b-xl texto"
+                        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                        aria-controls="accordion-collapse-body-3">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ¿Dónde puedo comprar sus productos?
+                        </span>
+                        <svg data-accordion-icon class="w-5 h-5 text-gray-600 shrink-0" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                    <div class="p-6 border border-t-0 border-gray-200 bg-white rounded-b-xl">
+                        <div class="grid md:grid-cols-3 gap-6 text-gray-700">
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-3">Tiendas físicas</h3>
+                                <p>Nuestros puntos de venta en Quito y Guayaquil</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-3">E-commerce</h3>
+                                <a href="#" class="text-amber-600 hover:text-amber-800 font-medium flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                        <path fill-rule="evenodd"
+                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    Visitar tienda online
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-3">Distribuidores</h3>
+                                <p>Listado de distribuidores autorizados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800 pie-de-pagina">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a
+                    href="/index.html" class="hover:underline">"La Douceur Cacao"</a>. Todos los
+                derechos reservados.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="/pages/producto.html"
+                        class="hover:underline me-4 md:me-6">Productos</a>
+                </li>
+                <li>
+                    <a href="/pages/contacto.html" class="hover:underline">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--SCRIPT-->
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
