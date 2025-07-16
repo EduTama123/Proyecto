@@ -127,7 +127,7 @@ const validarCodigoPostal = () => {
     return true;
 };
 
-// Validar País (como input text)
+// Validar País
 const validarPais = () => {
     const valor = inputPais.value.trim();
     const errorElement = document.getElementById('errorPais');
@@ -276,7 +276,7 @@ const enviarFormulario = async () => {
     botonEnviar.disabled = true;
 };
 
-// Función para generar y mostrar la tabla (versión corregida)
+// Función para generar y mostrar la tabla
 const generarTabla = () => {
     const tablaRegistrosBody = document.getElementById('tableBody');
 
