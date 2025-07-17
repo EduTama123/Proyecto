@@ -11,10 +11,11 @@
     <link rel="icon" href="/img/cocoa_icon.png">
     <!--ENLACE MIS ESTILOS-->
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/productos.css">
     <title>Productos</title>
 </head>
 
-<body>
+<body class="grid-layout">
     <!--NAV-->
     <nav class="bg-white dark:bg-gray-900 w-full z-20 top-0 start-0 border-gray-200 dark:border-gray-600 mi-nav">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mi-nav">
@@ -79,259 +80,368 @@
     </nav>
     <!--TITULO-->
     <h2 class="titulo-productos"><em><strong>¡COMPRA NUESTROS PRODUCTOS 🛒🛒🛒!</strong></em></h2>
+    <main class="main-content">
+        <div class="carrito-container">
+            <!--LISTA DE COMPRAS-->
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto mt-8">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Carrito de Compras 🛍️</h2>
+                <ul id="carrito" class="divide-y divide-gray-200">
+                    <!-- Mensaje cuando el carrito está vacío -->
+                    <li class="py-4 text-gray-500" id="mensaje-vacio">No se ha añadido ningún producto al carrito</li>
+                </ul>
 
-
-    <!--FILA DE TARJETAS-->
-    <div class="flex flex-wrap justify-center gap-6 px-4 py-8">
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://www.supermaxi.com/wp-content/uploads/2024/12/7868000587920-1.jpg" alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Manteca de Cacao Orgánica
-                    (200g)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.2</span>
-                    </div>
+                <div class="mt-4 border-t pt-4">
+                    <p id="totalCompra" class="text-xl font-semibold text-gray-900">Total: $0.00</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$14.90</span>
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center border border-gray-300 rounded-md">
-                            <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">-</button>
-                            <span class="px-2 py-1">0</span>
-                            <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">+</button>
+            </div>
+        </div>
+        <div class="productos-grid">
+            <!--FILA DE TARJETAS-->
+            <div class="flex flex-wrap justify-center gap-6 px-4 py-8">
+                <div class="producto-card" id="producto1">
+                    <!--Tarjeta 1-->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto1">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://www.supermaxi.com/wp-content/uploads/2024/12/7868000587920-1.jpg"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Manteca de
+                                Cacao
+                                Orgánica
+                                (200g)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.2</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$14.90</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md fondo">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <button
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Añadir
-                        </button>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto2">
+                    <!-- Tarjeta 2 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto2">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://statics.tipti.market/product-media/0605b136-8241-4d3f-bf14-316effb275df.jpg"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Chocolate con
+                                Leche y
+                                Almendras (80g barra)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg> <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.5</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$5.99</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto3">
+                    <!-- Tarjeta 3 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto3">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://www.supermaxi.com/wp-content/uploads/2024/08/7862109952726-1.jpg"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Bombones de
+                                Cacao
+                                Rellenos (12 unidades)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.8</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$18.50</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto4">
+                    <!-- Tarjeta 4 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto4">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://www.supermaxi.com/wp-content/uploads/2025/05/7868000812312-1.jpg.webp"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Salsa de
+                                Chocolate
+                                Artesanal (250ml)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg> <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">3.9</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$9.80</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--NUEVA FILA DE TARJETAS-->
+            <div class="flex flex-wrap justify-center gap-6 px-4 py-8">
+                <div class="producto-card" id="producto5">
+                    <!-- Tarjeta 5 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto5">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ARX6pFo9UINkrItJVAkYSuhRmd1nbruFEQ&s"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Té de Cáscara
+                                de
+                                Cacao
+                                (20 bolsitas) Premium</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.1</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$7.40</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto6">
+                    <!-- Tarjeta 6 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto6">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://m.media-amazon.com/images/I/71UIu7qNitL._UF894,1000_QL80_.jpg"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Kit de
+                                Chocolate
+                                para
+                                Derretir (500g + moldes)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg> <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.3</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$22.00</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto7">
+                    <!-- Tarjeta 7 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto7">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9M48r7Tgz3RukK2oSG5tqpO7MCJwiFZN-g&s"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Tableta de
+                                Chocolate
+                                Blanco con Trozos de Cacao (90g)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg>
+                                    <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.6</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$7.20</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" id="producto8">
+                    <!-- Tarjeta 8 -->
+                    <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+                        id="producto8">
+                        <img class="p-4 w-full rounded-t-lg"
+                            src="https://www.supermaxi.com/wp-content/uploads/2025/05/items2Figm2F1000x10002F7861042544579-1.jpg"
+                            alt="product image" />
+                        <div class="px-5 pb-5">
+                            <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Crema Untable
+                                de
+                                Avellana
+                                y Cacao (280g)</h5>
+                            <div class="flex items-center mt-2.5 mb-4">
+                                <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                        <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                                    </svg> <span
+                                        class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.0</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xl font-bold text-gray-900 dark:text-white">$10.90</span>
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-md">
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-menos">-</button>
+                                        <span class="px-2 py-1 contador-valor">0</span>
+                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100 btn-mas">+</button>
+                                    </div>
+                                    <button
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-agregar">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://statics.tipti.market/product-media/0605b136-8241-4d3f-bf14-316effb275df.jpg"
-                alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Chocolate con Leche y
-                    Almendras (80g barra)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg> <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.5</span>
+        <div class="contenedor-video">
+            <!--VIDEO DENTRO DE UNA CARTA-->
+            <div
+                class="w-full max-w-4xl mx-auto bg-white border border-gray-200 rounded-xl shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden contenedor-video">
+                <div class="p-6 md:p-8 flex flex-col items-center">
+                    <!-- Cabecera -->
+                    <div class="text-center mb-6 w-full">
+                        <h5 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
+                            ¿Quieres probar nuestros productos 😋?
+                        </h5>
+                        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Te compartimos nuestra receta favorita para que lo hagas en casa y disfrutes del chocolate!
+                        </p>
                     </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$5.99</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
+                    <div class="w-full rounded-lg overflow-hidden shadow-xl">
+                        <iframe class="w-full video" src="https://www.youtube.com/embed/CRaSUtluZxk?si=4PMDviU-OEJYuRYI"
+                            title="Proceso de producción de cacao" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <!-- Tarjeta 3 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://www.supermaxi.com/wp-content/uploads/2024/08/7862109952726-1.jpg" alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Bombones de Cacao
-                    Rellenos (12 unidades)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.8</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$18.50</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://www.supermaxi.com/wp-content/uploads/2025/05/7868000812312-1.jpg.webp"
-                alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Salsa de Chocolate
-                    Artesanal (250ml)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg> <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">3.9</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$9.80</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-6 px-4 py-8">
-        <!--NUEVA FILA DE TARJETAS-->
-        <!-- Tarjeta 5 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ARX6pFo9UINkrItJVAkYSuhRmd1nbruFEQ&s"
-                alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Té de Cáscara de Cacao
-                    (20 bolsitas)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.1</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$7.40</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta 6 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://m.media-amazon.com/images/I/71UIu7qNitL._UF894,1000_QL80_.jpg" alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Kit de Chocolate para
-                    Derretir (500g + moldes)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg> <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.3</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$22.00</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta 7 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9M48r7Tgz3RukK2oSG5tqpO7MCJwiFZN-g&s"
-                alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Tableta de Chocolate
-                    Blanco con Trozos de Cacao (90g)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center">
-                        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.6</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$7.20</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta 8 -->
-        <div class="w-72 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-            <img class="p-4 w-full rounded-t-lg"
-                src="https://www.supermaxi.com/wp-content/uploads/2025/05/items2Figm2F1000x10002F7861042544579-1.jpg"
-                alt="product image" />
-            <div class="px-5 pb-5">
-                <h5 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Crema Untable de Avellana
-                    y Cacao (280g)</h5>
-                <div class="flex items-center mt-2.5 mb-4">
-                    <div class="flex items-center"> <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                            <path
-                                d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                        </svg> <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded ml-2">4.0</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">$10.90</span>
-                    <button href="#"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--VIDEO DENTRO DE UNA CARTA-->
-    <div
-        class="w-full max-w-4xl mx-auto bg-white border border-gray-200 rounded-xl shadow-md dark:bg-gray-800 dark:border-gray-700 overflow-hidden contenedor-video">
-        <div class="p-6 md:p-8 flex flex-col items-center">
-            <!-- Cabecera -->
-            <div class="text-center mb-6 w-full">
-                <h5 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
-                    ¿Quieres probar nuestros productos 😋?
-                </h5>
-                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                    Te compartimos nuestra receta favorita para que lo hagas en casa y disfrutes del chocolate!
-                </p>
-            </div>
-            <div class="w-full rounded-lg overflow-hidden shadow-xl">
-                <iframe class="w-full video" src="https://www.youtube.com/embed/CRaSUtluZxk?si=4PMDviU-OEJYuRYI"
-                    title="Proceso de producción de cacao" frameborder="0" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </div>
     <!--FOOTER-->
     <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800 pie-de-pagina">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
@@ -349,6 +459,11 @@
             </ul>
         </div>
     </footer>
+    <!--SCRIPT-->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="/js/carrito.js"></script>
 </body>
 
 </html>
