@@ -22,45 +22,117 @@
     margin-top: 20px;
 }
 
+.contenedor-video {
+    height: 500px;
+}
+.fondo-video{
+    background-color: #603618;
+}
+
+/* Estilos generales para las tarjetas */
+.producto-card .bg-white {
+    background-color: #fff6a9;
+    /* Fondo amarillo claro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las imágenes */
 .producto-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    padding: 1rem;
+    border-radius: 12px !important;
+    margin: 0 auto;
+    max-height: 200px;
+    object-fit: contain;
+    background-color: white;
+    padding: 8px !important;
 }
 
-.producto-card>div {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+/* Contenedor del contenido de la tarjeta */
+.producto-card .px-5 {
+    padding: 1rem 1.25rem;
 }
 
+/* Título del producto */
 .producto-card h5 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    min-height: 3.5em;
+    color: #5D4037 !important;
+    /* Color marrón oscuro para mejor contraste */
+}
+
+/* Rating */
+.producto-card{
+    margin: 0.75rem 0;
+}
+
+/* Precio */
+.producto-card .text-xl.font-bold {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #2d3748;
+    color: #BF360C !important;
+    /* Color naranja oscuro */
 }
 
-.producto-card .flex.items-center {
-    margin-bottom: 1rem;
+/* Contador de cantidad */
+.producto-card .border.border-gray-300.rounded-md {
+    border-radius: 8px !important;
+    overflow: hidden;
+    border: 1px solid #FFA000 !important;
 }
 
-.producto-card .text-xl {
-    font-size: 1.5rem;
+.producto-card .btn-menos,
+.producto-card .btn-mas {
+    padding: 0.25rem 0.5rem;
+    background-color: #FFE082;
+    color: #5D4037;
+    border: none;
     font-weight: bold;
-    color: #2d3748;
 }
 
-
-.producto-card .flex.items-center.gap-2 {
-    margin-top: auto;
+.producto-card .contador-valor {
+    min-width: 30px;
+    text-align: center;
+    background-color: white;
 }
 
+/* Botón Añadir */
+.producto-card .btn-agregar {
+    background-color: #FF8F00 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
 
-@media (max-width: 640px) {
+.producto-card .btn-agregar:hover {
+    background-color: #FF6F00 !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
     .producto-card {
-        max-width: 100%;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .producto-card h5 {
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .flex.items-center.justify-between {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .producto-card .flex.items-center.gap-2 {
+        width: 100%;
+        justify-content: space-between;
     }
 }
