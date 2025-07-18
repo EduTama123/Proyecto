@@ -166,7 +166,7 @@ body {
   /* Fondo con más espacio entre iconos */
   background: 
     linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), /* Capa semi-transparente */
-    url("/img/cocoa_icon.png") repeat;
+    url("https://edutama123.github.io/Proyecto/img/cocoa_icon.png") repeat;
   
   background-size: 
     auto, /* Para la capa de gradiente */
