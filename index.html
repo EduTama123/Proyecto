@@ -10,7 +10,10 @@
     <!--FAVICON-->
     <link rel="icon" href="img/cocoa_icon.png">
     <!--ENLACE MIS ESTILOS-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" media="all" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>Home</title>
 </head>
 
@@ -37,7 +40,7 @@
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mi-nav">
                     <li>
                         <a href="index.html"
-                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 flex items-center gap-2"
+                            class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0 flex items-center gap-2"
                             aria-current="page">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-house icon" viewBox="0 0 16 16">
@@ -71,6 +74,20 @@
                                     d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5" />
                             </svg>
                             Contacto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/juegos.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 flex items-center gap-2"
+                            aria-current="page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-joystick icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2" />
+                                <path
+                                    d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23" />
+                            </svg>
+                            Sala de juegos
                         </a>
                     </li>
                 </ul>
@@ -157,66 +174,139 @@
         <!--TITULO-->
         <div class="contenedor-titulo flex items-center justify-center my-8">
             <hr class="border-t border-black w-32 md:w-48 mx-4">
-            <h2 class="titulo text-center px-4">
-                <em><strong>ACERCA DE NOSOTROS</strong></em>
-            </h2>
+
+            <body>
+                <div class="hover-container">
+                    <h1 class="explosive-text"><strong><em>ACERCA DE NOSOTROS</em></strong></h1>
+                </div>
+            </body>
             <hr class="border-t border-black w-32 md:w-48 mx-4">
         </div>
-        <!--CARTA-->
+
+        <!--NUEVA TARJETA-->
         <div class="contenedorTarjeta">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 max-w-7xl mx-auto">
-                <!-- Tarjeta 1 -->
-                <div
-                    class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
-                    <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
-                        src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="empresa_ficticia" />
-                    <div class="p-5 flex flex-col flex-grow">
-                        <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">NUESTRA
-                            HISTORIA</h5>
-                        <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base">
-                            Empresa ecuatoriana apasionada por el cacao, produciendo y distribuyendo granos y derivados
-                            con
-                            altos estándares de calidad. Combinamos sostenibilidad, ética e innovación para crear
-                            chocolates
-                            excepcionales. Buscamos destacar globalmente, llevando la excelencia del cacao ecuatoriano
-                            al
-                            mundo.
-                        </p>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
+                            src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                            alt="empresa_ficticia" />
+                    </div>
+                    <div class="card-back">
+                        <div
+                            class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">
+                                    NUESTRA
+                                    HISTORIA</h5>
+                                <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base ">
+                                    Empresa ecuatoriana apasionada por el cacao, produciendo y distribuyendo granos y
+                                    derivados
+                                    con
+                                    altos estándares de calidad. Combinamos sostenibilidad, ética e innovación para
+                                    crear
+                                    chocolates
+                                    excepcionales. Buscamos destacar globalmente, llevando la excelencia del cacao
+                                    ecuatoriano
+                                    al
+                                    mundo.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Tarjeta 2 -->
-                <div
-                    class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
-                    <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
-                        src="https://cofinacocoa.com/wp-content/uploads/2018/09/mision2.jpg" alt="finca_cacao" />
-                    <div class="p-5 flex flex-col flex-grow">
-                        <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">MISIÓN</h5>
-                        <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base">
-                            Somos una empresa ecuatoriana dedicada a la producción y comercialización de cacao y sus
-                            derivados,
-                            cumpliendo altos estándares de calidad e inocuidad. Trabajamos con sostenibilidad,
-                            responsabilidad
-                            social y cuidado ambiental para garantizar la satisfacción.
-                        </p>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
+                            src="https://cofinacocoa.com/wp-content/uploads/2018/09/mision2.jpg" alt="finca_cacao" />
+                    </div>
+                    <div class="card-back">
+                        <div
+                            class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">
+                                    MISIÓN</h5>
+                                <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base">
+                                    Somos una empresa ecuatoriana dedicada a la producción y comercialización de cacao y
+                                    sus
+                                    derivados,
+                                    cumpliendo altos estándares de calidad e inocuidad. Trabajamos con sostenibilidad,
+                                    responsabilidad
+                                    social y cuidado ambiental para garantizar la satisfacción.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
+                            src="https://cofinacocoa.com/wp-content/uploads/2018/06/vision.jpg"
+                            alt="personas_reunidas" />
+                    </div>
+                    <div class="card-back">
+                        <div
+                            class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">
+                                    VISIÓN</h5>
+                                <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base">
+                                    Queremos ser reconocidos internacionalmente como productores de chocolate de
+                                    excelencia,
+                                    superando
+                                    expectativas en sabor y calidad. Promovemos negocios inclusivos con proveedores e
+                                    innovación
+                                    en
+                                    procesos, consolidando el cacao ecuatoriano en el mundo expandiendonos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TITULO -->
+        <div class="contenedor-titulo flex items-center justify-center my-8">
+            <hr class="border-t border-black w-32 md:w-48 mx-4">
+            <div class="hover-container">
+                <h1 class="explosive-text"><strong><em>¡ESTAMOS A LAS ÓRDENES!</em></strong></h1>
+            </div>
+            <hr class="border-t border-black w-32 md:w-48 mx-4">
+        </div>
 
-                <!-- Tarjeta 3 -->
-                <div
-                    class="flex flex-col border border-gray-200 rounded-lg shadow-sm h-full hover:shadow-md transition-shadow duration-300 cuerpo">
-                    <img class="rounded-t-lg w-full h-48 sm:h-56 md:h-48 lg:h-52 xl:h-48 object-cover"
-                        src="https://cofinacocoa.com/wp-content/uploads/2018/06/vision.jpg" alt="personas_reunidas" />
-                    <div class="p-5 flex flex-col flex-grow">
-                        <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-black text-center">VISIÓN</h5>
-                        <p class="mb-3 font-normal text-gray-700 flex-grow text-sm md:text-base">
-                            Queremos ser reconocidos internacionalmente como productores de chocolate de excelencia,
-                            superando
-                            expectativas en sabor y calidad. Promovemos negocios inclusivos con proveedores e innovación
-                            en
-                            procesos, consolidando el cacao ecuatoriano en el mundo expandiendonos.
+        <!-- Contenedor principal responsivo -->
+        <div class="contenedor-mapa-texto max-w-6xl mx-auto p-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Mapa -->
+                <div class="mapa-container rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3986.824326942926!2d-79.771616!3d-2.219799!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d69b1aed19213%3A0xf940b134d0e0b2f8!2sCofinacocoa!5e0!3m2!1ses!2sus!4v1752803611140!5m2!1ses!2sus"
+                        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full h-full min-h-[300px]">
+                    </iframe>
+                </div>
+
+                <!-- Texto -->
+                <div class="texto-container bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl md:text-3xl font-bold text-black mb-4 text-center lg:text-left">¡PUEDES
+                        ENCONTRARNOS AQUÍ!</h2>
+                    <p class="text-black mb-6 text-lg">
+                        Si desea comunicarse directamente con el área comercial, puede escribir a <span
+                            class="font-semibold">cza@cofinacocoa.com</span> o
+                        llamar a la extensión <span class="font-semibold">133</span>.
+                    </p>
+                    <div class="info-adicional space-y-2">
+                        <p class="text-black"><span class="font-semibold">Dirección:</span> Km 11 Vía Durán Tambo.
+                            Guayaquil - Ecuador
+                            Casilla Postal: 09-01 - 9400
                         </p>
+                        <p class="text-black"><span class="font-semibold">Horario:</span> Lunes a Viernes 8:00 - 17:00
+                        </p>
+                        <p class="text-black"><span class="font-semibold">Teléfono:</span> (593 4) 259 1979</p>
                     </div>
                 </div>
             </div>
@@ -231,10 +321,10 @@
             </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                 <li>
-                    <a href="/producto.html" class="hover:underline me-4 md:me-6">Productos</a>
+                    <a href="/pages/producto.html" class="hover:underline me-4 md:me-6">Productos</a>
                 </li>
                 <li>
-                    <a href="/contacto.html" class="hover:underline">Contacto</a>
+                    <a href="/pages/contacto.html" class="hover:underline">Contacto</a>
                 </li>
             </ul>
         </div>

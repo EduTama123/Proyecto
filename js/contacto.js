@@ -1,3 +1,17 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyCb_WD4ZnxaI1NuO37rAHCbR8fTF1LiA9w",
+    authDomain: "proyectocacao-a258b.firebaseapp.com",
+    projectId: "proyectocacao-a258b",
+    storageBucket: "proyectocacao-a258b.firebasestorage.app",
+    messagingSenderId: "926750057177",
+    appId: "1:926750057177:web:ee2066f3b7c105d3c514c8"
+};
+
+// Inicializar Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+
 // Obtener elementos del DOM
 const formContacto = document.getElementById('formContacto');
 const inputNombre = document.getElementById('nombres');
@@ -263,17 +277,60 @@ const mensajeExitoso = document.querySelector('#registroExitoso');
 const enviarFormulario = async () => {
     mensajeExitoso.textContent = "Enviando...";
     await new Promise(resolve => setTimeout(resolve, 1500));
-    mensajeExitoso.textContent = "Formulario enviado con éxito!!!";
-    formContacto.reset();
-    inputNombre.classList.remove('border-green-500');
-    inputApellido.classList.remove('border-green-500');
-    inputEmail.classList.remove('border-green-500');
-    inputTelefono.classList.remove('border-green-500');
-    inputCodigoPostal.classList.remove('border-green-500');
-    inputPais.classList.remove('border-green-500');
-    inputFechaNacimiento.classList.remove('border-green-500');
-    inputMensaje.classList.remove('border-green-500');
-    botonEnviar.disabled = true;
+
+    try {
+        // Obtener valores del formulario
+        const formData = {
+            nombres: inputNombre.value.trim(),
+            apellidos: inputApellido.value.trim(),
+            email: inputEmail.value.trim(),
+            telefono: inputTelefono.value.trim(),
+            codigoPostal: inputCodigoPostal.value.trim(),
+            pais: inputPais.value.trim(),
+            fechaNacimiento: inputFechaNacimiento.value,
+            mensaje: inputMensaje.value.trim(),
+        };
+
+        // Subir a Firebase
+        await db.collection("contactos").add(formData);
+
+        mensajeExitoso.textContent = "Formulario enviado con éxito!!!";
+
+    } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+        mensajeExitoso.textContent = "Error al enviar el formulario. Intente nuevamente.";
+    } finally {
+        mensajeExitoso.textContent = "Formulario enviado con éxito!!!";
+
+        // Resetear el formulario
+        formContacto.reset();
+
+        // Resetear estilos de validación y mostrar errores
+        document.querySelectorAll('.error').forEach(el => {
+            el.textContent = 'Este campo es obligatorio'; // Mensaje genérico de error
+            el.className = 'error text-red-600 text-sm mt-1';
+        });
+
+        // Aplicar estilos a los inputs
+        document.querySelectorAll('input, textarea').forEach(input => {
+            input.classList.remove('border-green-500', 'border-red-500');
+            input.classList.add('border-gray-300', 'border-red-500'); // Rojo para indicar requerido
+        });
+
+        // Volver a validar todos los campos para mostrar errores
+        validarNombre();
+        validarApellido();
+        validarEmail();
+        validarTelefono();
+        validarCodigoPostal();
+        validarPais();
+        validarFechaNacimiento();
+        validarMensaje();
+
+        // Deshabilitar botón hasta que se llenen los campos
+        botonEnviar.disabled = true;
+    }
+
 };
 
 // Función para generar y mostrar la tabla

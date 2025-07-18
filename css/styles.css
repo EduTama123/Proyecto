@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid #e2e8f0;
-    background-color: #f9dbbd;
+    background-color: white;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@ body {
 }
 
 .mi-nav {
-    background-color: #351e0d;
+    background-color: #f1b81b;
     font-size: 25px;
 }
 
@@ -84,7 +84,9 @@ body {
 }
 
 .tarjeta {
-    background-color: rgba(173, 127, 58, 0.709);
+    background-color: white;
+    text-align: center;
+    width: 600px;
 }
 
 .parrafo {
@@ -139,4 +141,103 @@ footer {
 .cuerpo:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+}
+
+/* Estilos mejorados con más espacio entre iconos */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+:root {
+  --pattern-size: 45px; /* Tamaño aumentado para más espacio */
+  --pattern-spacing: 1000px; /* Espacio adicional entre iconos */
+}
+
+/* Animación diagonal suave */
+@keyframes diagonal-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: var(--pattern-spacing) var(--pattern-spacing);
+  }
+}
+
+body {
+  
+  /* Fondo con más espacio entre iconos */
+  background: 
+    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), /* Capa semi-transparente */
+    url("/img/cocoa_icon.png") repeat;
+  
+  background-size: 
+    auto, /* Para la capa de gradiente */
+    var(--pattern-size) var(--pattern-size); /* Tamaño del icono */
+  
+  background-attachment: fixed;
+  background-position: 0 0;
+  
+  /* Animación más lenta */
+  animation: diagonal-scroll 50s linear infinite;
+  
+  /* Optimizaciones de rendimiento */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/*css para el nuevo titulo*/
+
+.hover-container {
+    display: inline-block;
+    position: relative;
+    padding: 25px 0;
+}
+
+.explosive-text {
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-out;
+}
+
+.explosive-text:hover {
+    transform: scale(1.1);
+}
+
+.explosive-text:hover::before,
+.explosive-text:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: burst 0.8s ease-out forwards;
+}
+
+.explosive-text:hover::before {
+    background: radial-gradient(circle, rgba(255, 227, 67, 0.685), transparent);
+    z-index: -1;
+}
+
+.explosive-text:hover::after {
+    background: radial-gradient(circle, rgba(252, 241, 25, 0.6), transparent);
+    z-index: -2;
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
 }
