@@ -20,7 +20,7 @@ const inputEmail = document.getElementById('email');
 const inputTelefono = document.getElementById('phone');
 const inputCodigoPostal = document.getElementById('codigo-postal');
 const inputPais = document.getElementById('pais');
-const inputFechaNacimiento = document.getElementById('fecha-nacimiento');
+const inputCedula = document.getElementById('cedula');
 const inputMensaje = document.getElementById('message');
 const botonEnviar = document.getElementById('botonEnviar');
 
@@ -166,26 +166,38 @@ const validarPais = () => {
     return true;
 };
 
-// Validar Fecha de Nacimiento
-const validarFechaNacimiento = () => {
-    const valor = inputFechaNacimiento.value;
-    const errorElement = document.getElementById('errorFechaNacimiento');
+//Validar Cedula
+const validarCedula = () => {
+    const valor = inputCedula.value.trim();
+    const errorElement = document.getElementById('errorCedula');
 
     if (valor === '') {
-        mostrarError(inputFechaNacimiento, errorElement, 'La fecha de nacimiento es obligatoria');
+        mostrarError(inputCedula, errorElement, 'La cédula es obligatoria. Ejemplo: 1712345678');
         return false;
     }
 
-    const fechaNacimiento = new Date(valor);
-    const hoy = new Date();
-    const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-
-    if (edad < 18) {
-        mostrarError(inputFechaNacimiento, errorElement, 'Debe ser mayor de 18 años');
+    // Validar que solo contenga números
+    const regexSoloNumeros = /^[0-9]+$/;
+    if (!regexSoloNumeros.test(valor)) {
+        mostrarError(inputCedula, errorElement, 'Solo se permiten números. Ejemplo: 1712345678');
         return false;
     }
 
-    mostrarValido(inputFechaNacimiento, errorElement);
+    // Validar longitud (10 dígitos para cédula ecuatoriana)
+    if (valor.length !== 10) {
+        mostrarError(inputCedula, errorElement, 'La cédula debe tener 10 dígitos. Ejemplo: 1712345678');
+        return false;
+    }
+
+    // Validar que el primer dígito esté entre 1-9
+    const primerDigito = parseInt(valor.charAt(0));
+    if (primerDigito < 1 || primerDigito > 9) {
+        mostrarError(inputCedula, errorElement, 'El primer dígito no es válido. Debe ser entre 1-9');
+        return false;
+    }
+
+    // Si pasó todas las validaciones
+    mostrarValido(inputCedula, errorElement);
     return true;
 };
 
@@ -225,7 +237,7 @@ const mostrarValido = (input, errorElement) => {
 
 //VERIFICAR SI SE CUMPLEN LAS CONDICIONES Y HABILITAR EL BOTON
 const validarFormulario = () => {
-    if (validarNombre() && validarApellido() && validarEmail() && validarTelefono() && validarCodigoPostal() && validarPais() && validarFechaNacimiento() && validarMensaje()) {
+    if (validarNombre() && validarApellido() && validarEmail() && validarTelefono() && validarCodigoPostal() && validarPais() && validarCedula() && validarMensaje()) {
         botonEnviar.disabled = false;
     } else {
         botonEnviar.disabled = true;
@@ -262,8 +274,8 @@ inputPais.addEventListener('input', () => {
     validarFormulario();
 });
 
-inputFechaNacimiento.addEventListener('change', () => {
-    validarFechaNacimiento();
+inputCedula.addEventListener('change', () => {
+    validarCedula();
     validarFormulario();
 });
 
@@ -287,7 +299,7 @@ const enviarFormulario = async () => {
             telefono: inputTelefono.value.trim(),
             codigoPostal: inputCodigoPostal.value.trim(),
             pais: inputPais.value.trim(),
-            fechaNacimiento: inputFechaNacimiento.value,
+            cedula: inputCedula.value.trim(),
             mensaje: inputMensaje.value.trim(),
         };
 
@@ -324,7 +336,7 @@ const enviarFormulario = async () => {
         validarTelefono();
         validarCodigoPostal();
         validarPais();
-        validarFechaNacimiento();
+        validarCedula();
         validarMensaje();
 
         // Deshabilitar botón hasta que se llenen los campos
@@ -344,7 +356,7 @@ const generarTabla = () => {
     const telefono = document.getElementById('phone').value;
     const codigoPostal = document.getElementById('codigo-postal').value;
     const pais = document.getElementById('pais').value;
-    const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
+    const cedula = document.getElementById('cedula').value;
     const mensaje = document.getElementById('message').value;
 
     // Limpiar tabla existente
@@ -368,7 +380,7 @@ const generarTabla = () => {
     agregarFila('Teléfono', telefono);
     agregarFila('Código Postal', codigoPostal);
     agregarFila('País', pais);
-    agregarFila('Fecha de Nacimiento', fechaNacimiento);
+    agregarFila('Cédula', cedula);
 
     // Manejo especial para el mensaje (puede ser largo)
     const filaMensaje = document.createElement('tr');
@@ -398,7 +410,7 @@ formContacto.addEventListener('submit', function (e) {
         validarTelefono() &&
         validarCodigoPostal() &&
         validarPais() &&
-        validarFechaNacimiento() &&
+        validarCedula() &&
         validarMensaje();
 
     if (esValido) {
