@@ -274,7 +274,7 @@ inputPais.addEventListener('input', () => {
     validarFormulario();
 });
 
-inputCedula.addEventListener('change', () => {
+inputCedula.addEventListener('input', () => {
     validarCedula();
     validarFormulario();
 });
