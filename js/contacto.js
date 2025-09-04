@@ -177,8 +177,8 @@ const validarCedula = () => {
     }
 
     // Validar que solo contenga números
-    const regexSoloNumeros = /^[0-9]+$/;
-    if (!regexSoloNumeros.test(valor)) {
+    const regex= /^[0-9]+$/;
+    if (!regex.test(valor)) {
         mostrarError(inputCedula, errorElement, 'Solo se permiten números. Ejemplo: 1712345678');
         return false;
     }
